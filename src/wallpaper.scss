@@ -1,0 +1,52 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em 1em;
+}
+img {
+     object-fit: cover;
+     max-width: 30vw;
+     height: 25vh;
+}
+h1 {
+    text-align: center;
+    font-size: 3em;
+    font-family: "Open Sans", sans-serif;
+}
+li {
+    list-style-type: none;
+    flex-basis: 26%;
+    position: relative;
+    width: 50%;
+    font-family: "Open Sans", sans-serif;
+    &:hover {
+        .toolTip {
+            visibility: visible;
+            opacity: 1;   
+        }    
+    }
+    #name {
+        position: absolute;
+        top: 70%;
+        left: 2%;
+    }
+    #desc {
+        position: absolute;
+        top: 80%;
+        left: 2%;  
+    }
+    #download {
+        position: absolute;
+        top: 8%;
+        left: 80%;
+    }
+}
+.toolTip {
+    opacity: 0;
+    transition: opacity 0.7s;
+}
+.loadMore {
+    position: absolute;
+    left: 50%;
+}
