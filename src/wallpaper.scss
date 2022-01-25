@@ -4,49 +4,87 @@
     justify-content: center;
     gap: 1em 1em;
 }
+
 img {
      object-fit: cover;
      max-width: 30vw;
      height: 25vh;
+     transition: ease-in-out 0.7s;
 }
+
 h1 {
     text-align: center;
     font-size: 3em;
     font-family: "Open Sans", sans-serif;
 }
+
 li {
     list-style-type: none;
+    color: white;
     flex-basis: 26%;
     position: relative;
     width: 50%;
     font-family: "Open Sans", sans-serif;
+    overflow: hidden;
     &:hover {
         .toolTip {
             visibility: visible;
             opacity: 1;   
-        }    
+        }
+
+        img {
+            filter: brightness(60%);
+            transition: ease-in-out 0.7s;
+            transform: scale(1.1); 
+        }
     }
+
     #name {
         position: absolute;
-        top: 70%;
+        top: 69%;
         left: 2%;
+        font-weight: bolder;
+        font-size: large;
     }
+
     #desc {
         position: absolute;
-        top: 80%;
+        top: 79%;
         left: 2%;  
     }
+
     #download {
         position: absolute;
-        top: 8%;
-        left: 80%;
+        top: 7%;
+        left: 75%;
+        text-decoration: none;
+        background-color: rgba(0,0,0,0);
+        color: white;
+        padding: 0.35em 0.7em;
+        border: 1px solid white;
+        font-size: larger;
+        font-weight: bolder;
     }
 }
+
 .toolTip {
     opacity: 0;
-    transition: opacity 0.7s;
+    transition: ease-in-out 0.7s;
 }
+
 .loadMore {
     position: absolute;
-    left: 50%;
+    left: 46%;
+    margin: 20px;
+    background-color: white;
+    color: black;
+    padding: 0.35em 0.7em;
+    border: 1px solid black;
+    font-weight: bolder;
+    font-size: large;
+    transition: 0.7s;
+    &:hover {
+        background-color: black;
+        color: white;
+    }
 }
